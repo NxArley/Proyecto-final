@@ -1,0 +1,114 @@
+{
+  "main": {
+    "name": "Heladería la esperanza",
+    "occupation": "(Your Occupation Here)",
+    "description": "Here will be your description. Use this to describe what you do or whatever you feel best describes yourself to a potential employer",
+    "image": "imagen10.jpg",
+    "image1": "malteada.jpg",
+    "bio": "Somos una experiencia única, dulce y diferente. El lugar ideal para compartir en familia, amigos o en pareja un delicioso HELADO o MALTEADAS; elige entre cientos de sabores diferentes y miles de combinaciones, además te ofrecemos la mejor atención al cliente. Si buscas un plan en Timaná, Huila; somos los indicados para endulzar tu día. ¡Te esperamos!",
+    "contactmessage": "Here is where you should write your message to readers to have them get in contact with you.",
+    "email": "youremailhere@gmail.com",
+    "phone": "555-555-5555",
+    "address": {
+      "street": "(Your Street)",
+      "city": "(Your City)",
+      "state": "(Your State)",
+      "zip": "(Your Zip/Postal Code)"
+    },
+    "website": "",
+    "resumedownload": "",
+    "social": [
+      {
+        "name": "facebook",
+        "url": "http://www.facebook.com/",
+        "className": "fa fa-facebook"
+      },
+      {
+        "name": "twitter",
+        "url": "http://twitter.com",
+        "className": "fa fa-twitter"
+      },
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com",
+        "className": "fa fa-linkedin"
+      },
+      {
+        "name": "instagram",
+        "url": "http://instagram.com/",
+        "className": "fa fa-instagram"
+      },
+      {
+        "name": "github",
+        "url": "http://github.com/",
+        "className": "fa fa-github"
+      }
+    ]
+  },
+  "resume": {
+    "skillmessage":"Nuestros Productos",
+    "malte": [
+      {
+        "name": "Malteadas",
+        "description": "La malteada es una bebida elaborada a base de leche o helado, que puede llevar frutas, chocolate, turrón o también helado. Se puede encontrar en sabores como fresa, vainilla y chocolate."
+      }
+    ],
+    "hel": [
+      { "name": "Helados",
+        "description1": "Conos de helado de una, dos o tres bolas. Se pueden encontrar en sabores como chocolate, vainilla, fresa, mora, lulo, chicle, cereza, etc. Adicional, se agregará una salsa y un topping."
+      }
+    ],
+    "canasta": [
+      {
+        "name": "Canasta de helado",
+        "description1": "Deliciosas canastas de helado de tres bolas y mas. Se pueden combinar sabores como chocolate, vainilla, fresa, mora, lulo, chicle, cereza, etc. Adicional, se agregará una salsa, un topping y una galleta o barquilo según lo desee."
+      }
+    ]
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "Canadian Wanderlust",
+        "category": "My Travel Blog for my post-university travels",
+        "image": "canadian-wanderlust.jpg",
+        "url": "https://www.canadianwanderlust.com"
+      },
+      {
+        "title": "Fury Fighting Gear",
+        "category": "(offline now) A fighting gear company I started",
+        "image": "fury-fighting-gear.jpg",
+        "url": ""
+      },
+      {
+        "title": "Original Thai Food",
+        "category": "Website I built for a restaurant I like in Thailand",
+        "image": "original-thai-food.jpg",
+        "url": ""
+      },
+      {
+        "title": "Resume Website",
+        "category": "A React based resume website template",
+        "image": "resume-website.jpg",
+        "url": ""
+      },
+      {
+        "title": "Smirkspace",
+        "category": "(MVP Only) A React and Meteor based chat University project.",
+        "image": "smirkspace.jpg",
+        "url": "http://www.smirkspace.com"
+      }
+    ]
+  },
+  "testimonials": {
+    "testimonials": [
+      {
+        "text": "Here you should write some nice things that someone has said about you. No lies though, employers can tell when you are lying.",
+        "user": "Kareem Abdul Jabbar"
+      },
+      {
+        "text": "That Tim Baker must be one of the most brilliant developers I've ever met! It is amazing that nobody has hired him yet. Hey you, you should hire this guy, he may be fresh out of University and have zero on the job experience but I am confident that he will be one of your best developers in no time!",
+        "user": "Steve Wozniak... impersonator"
+      }
+    ]
+  }
+}

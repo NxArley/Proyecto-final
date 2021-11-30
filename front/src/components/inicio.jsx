@@ -1,30 +1,53 @@
-import React, { Fragment } from 'react';
-import Card from './card';
-import Carousel from './carrusel'
-class Inicio extends React.Component {
+import React, { Component } from 'react';
 
+class Header extends Component {
+   render() {
 
+      if (this.props.data) {
+         var name = this.props.data.name;
+         var networks = this.props.data.social.map(function (network) {
+            return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
+         })
+      }
 
+      return (
+         <header id="home">
 
-    render() {
+            <nav id="nav-wrap">
 
-        return (
-            <Fragment>
-                <div className="container mt-5">
-                    <Carousel className="offset-sm-1"/>
-                    <h1 className="offset-sm-1 mt-5 text-primary">Productos</h1>
-                    <div className="offset-sm-1 row">
-                        <Card className="ml-2" />
-                        <Card className="ml-2" />
-                        <Card className="ml-2" />
-                        <Card className="ml-2" />
-                        <Card className="ml-2" />
-                    </div>
+               <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+               <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
 
-                </div>
-            </Fragment>
-        );
-    }
+               <ul id="nav" className="nav">
+                  <li className="current"><a className="smoothscroll" href="#home">Inicio</a></li>
+                  <li><a className="smoothscroll" href="#about">Nosotros</a></li>
+                  <li><a className="smoothscroll" href="#resume">Productos</a></li>
+                  <li><a className="smoothscroll" href="#portfolio">Realiza tu pedido</a></li>
+                  {/* <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li> */}
+                  <li><a className="smoothscroll" href="#contact">Login</a></li>
+                  <li><a className="smoothscroll" href="#contact">Registro</a></li>
+                  
+               </ul>
+
+            </nav>
+
+            <div className="row banner">
+               <div className="banner-text">
+                  <h1 className="responsive-headline">{name}</h1>
+                  <hr />
+                  <ul className="social">
+                     {networks}
+                  </ul>
+               </div>
+            </div>
+
+            <p className="scrolldown">
+               <a className="smoothscroll" href="#about"><i className="icon-down-circle"></i></a>
+            </p>
+
+         </header>
+      );
+   }
 }
 
-export default Inicio;
+export default Header;

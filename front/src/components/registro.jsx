@@ -4,7 +4,6 @@ import React, { Fragment } from 'react';
 class Registro extends React.Component {
 
 
-
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -53,14 +52,15 @@ class Registro extends React.Component {
     render() {
         const token = sessionStorage.getItem("token");
         return (
-            <Fragment>
+            <section id="contact">
                 <div className="container">
                     <div className="row">
                         <h1 className="offset-lg-2 mt-1 mb-3 text-primary">Registro</h1>
+                        <br></br><br></br>
                         <div className="col-lg-8 offset-lg-2 border border-primary rounded bg-light mb-3">
                             {token && token !== '' && token != undefined ? ("you ar loged " + token) : (
                                 <form onSubmit={this.handleSubmit}>
-                                    <div class="row mt-5 m-2 mr-2 mb-2 ">
+                                    <div class="rrow mt-3 m-2 mr-2 mb-2 ">
                                         <div class="col">
                                             <label for="exampleInputEmail1" class="form-label">Nombre</label>
                                             <input type="text" className="form-control" placeholder="Nombre" aria-label="First name" />
@@ -118,7 +118,7 @@ class Registro extends React.Component {
                     </div>
 
                 </div>
-            </Fragment>
+            </section>
         );
     }
 }
