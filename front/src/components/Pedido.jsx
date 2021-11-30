@@ -52,49 +52,49 @@ class Portfolio extends Component {
                   <br></br><br></br><br></br><br></br>
                   <div class="some-class">
                     <h3>Base</h3>
-                    <input type="radio" class="radio" name="x" value="y" id="y" />
+                    <input type="radio" class="radio" name="p" value="a" id="a" />
                     <label for="y">Vainilla Chips</label>
-                    <input type="radio" class="radio" name="x" value="z" id="z" />
+                    <input type="radio" class="radio" name="p" value="b" id="b" />
                     <label for="z">Brownie</label>
-                    <input type="radio" class="radio" name="x" value="z" id="z" />
+                    <input type="radio" class="radio" name="p" value="c" id="c" />
                     <label for="z">Chocolate</label>
-                    <input type="radio" class="radio" name="x" value="z" id="z" />
+                    <input type="radio" class="radio" name="p" value="d" id="d" />
                     <label for="z">Tiramisú</label>
-                    <input type="radio" class="radio" name="x" value="z" id="z" />
+                    <input type="radio" class="radio" name="p" value="e" id="e" />
                     <label for="z">Chicle</label>
-                    <input type="radio" class="radio" name="x" value="z" id="z" />
+                    <input type="radio" class="radio" name="p" value="f" id="f" />
                     <label for="z">Fresa</label>
-                    <input type="radio" class="radio" name="x" value="z" id="z" />
+                    <input type="radio" class="radio" name="p" value="g" id="g" />
                     <label for="z">Arequipe</label>
-                    <input type="radio" class="radio" name="x" value="z" id="z" />
+                    <input type="radio" class="radio" name="p" value="h" id="h" />
                     <label for="z">Nata Maní</label>
                   </div>
                   <br></br><br></br><br></br><br></br>
                   <div class="some-class">
                     <h3>Seleccione Cobertura</h3>
-                    <input type="radio" class="radio" name="x" value="y" id="y" />
+                    <input type="radio" class="radio" name="l" value="y" id="y" />
                     <label for="y">Leche Condensada</label>
-                    <input type="radio" class="radio" name="x" value="z" id="z" />
+                    <input type="radio" class="radio" name="l" value="z" id="z" />
                     <label for="z">Chocolate</label>
-                    <input type="radio" class="radio" name="x" value="z" id="z" />
+                    <input type="radio" class="radio" name="l" value="z" id="z" />
                     <label for="z">Arequipe</label>
-                    <input type="radio" class="radio" name="x" value="z" id="z" />
+                    <input type="radio" class="radio" name="l" value="z" id="z" />
                     <label for="z">Mora</label>
                   </div>
                   <br></br><br></br><br></br><br></br>
                   <div class="some-class">
                     <h3>Seleccione Topping</h3>
-                    <input type="radio" class="radio" name="x" value="y" id="y" />
+                    <input type="radio" class="radio" name="j" value="y" id="y" />
                     <label for="y">Golochips</label>
-                    <input type="radio" class="radio" name="x" value="z" id="z" />
+                    <input type="radio" class="radio" name="j" value="z" id="z" />
                     <label for="z">Sparkies</label>
-                    <input type="radio" class="radio" name="x" value="y" id="y" />
+                    <input type="radio" class="radio" name="j" value="y" id="y" />
                     <label for="y">Barquillos</label>
-                    <input type="radio" class="radio" name="x" value="z" id="z" />
+                    <input type="radio" class="radio" name="j" value="z" id="z" />
                     <label for="z">Cerezas</label>
-                    <input type="radio" class="radio" name="x" value="y" id="y" />
+                    <input type="radio" class="radio" name="j" value="y" id="y" />
                     <label for="y">Brownie</label>
-                    <input type="radio" class="radio" name="x" value="z" id="z" />
+                    <input type="radio" class="radio" name="j" value="z" id="z" />
                     <label for="z">Masmelos</label>
                   </div>
                   <br></br><br></br><br></br><br></br>
