@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 
 
 class Login extends React.Component{
+    
 
     
 
@@ -53,10 +54,11 @@ class Login extends React.Component{
     render(){
         const token = sessionStorage.getItem("token");
         return(
-            <Fragment>
+            <section id="contact">
                 <div className="container">                    
                     <div className="row mt-3 ">
                         <h1 className="offset-sm-1 mt-5 text-primary">Login</h1>
+                        <br></br><br></br>
                         <div className="col-lg-6 offset-lg-1 border border-primary rounded bg-light mb-3">
                             {token && token !== '' && token!=undefined ? ("you ar loged "+token):(
                                 <form onSubmit={this.handleSubmit}>
@@ -80,7 +82,7 @@ class Login extends React.Component{
                     </div>
                     
                 </div>
-            </Fragment>
+            </section>
         );
     }
 }
