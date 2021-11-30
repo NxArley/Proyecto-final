@@ -39,7 +39,7 @@ class Portfolio extends Component {
                     <input type="text" className="form-control" placeholder="Nombre" aria-label="First name" />
                   </div>
                   <div class="col">
-                    <label for="exampleInputEmail1" class="form-label">Apellido</label>
+                    <label for="exampleInputEmail1" class="form-label">Mesa</label>
                     <input type="text" className="form-control" placeholder="Mesa" aria-label="Last name" />
                   </div>
                   <div class="some-class">
