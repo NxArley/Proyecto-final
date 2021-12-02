@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import $ from 'jquery';
 import './App.css';
-import Inicio from './Components/Inicio';
-import Footer from './Components/Footer';
-import Nosotros from './Components/Nosotros';
-import Productos from './Components/Productos';
+import Inicio from './components/inicio';
+import Footer from './components/Footer';
+import Nosotros from './components/Nosotros';
+import Productos from './components/Productos';
 // import Contactenos from './Components/Contactenos';
 // import Testimonials from './Components/Testimonials';
-import Login from './Components/Login';
-import Registro from './Components/Registro';
-import Pedido from './Components/Pedido';
+import Login from './components/login';
+import Registro from './components/registro';
+import Pedido from './components/Pedido';
 
 class App extends Component {
 
