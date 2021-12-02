@@ -63,4 +63,14 @@ EmpleadoCtrl.actualizar = async(req,res)=>{
     })
 }
 
+EmpleadoCtrl.buscarEmpleado = async(req,res)=>{
+
+    const nombres = req.params.nombres;
+
+    const respuesta = await Empleado.findOne({nombres:{$regex:".*"+nombres+".*"}})
+
+    res.json(respuesta)
+
+}
+
 module.exports = EmpleadoCtrl
