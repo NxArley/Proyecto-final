@@ -9,8 +9,9 @@ import Productos from './components/Productos';
 // import Contactenos from './Components/Contactenos';
 // import Testimonials from './Components/Testimonials';
 import Login from './components/login';
-import Registro from './components/registro';
+import Registro from './components/Registro';
 import Pedido from './components/Pedido';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
 
@@ -52,13 +53,12 @@ class App extends Component {
         <Nosotros data={this.state.resumeData.main}/>
         <Productos data={this.state.resumeData.resume}/>
         <Pedido data={this.state.resumeData.portfolio}/>
-        {/* <Testimonials data={this.state.resumeData.testimonials}/> */}
         <Login data={this.state.resumeData.main}/>
         <Registro data={this.state.resumeData.main}/>
-        {/* <Contactenos data={this.state.resumeData.main}/> */}
         <Footer data={this.state.resumeData.main}/>
         
       </div>
+
     );
   }
 }

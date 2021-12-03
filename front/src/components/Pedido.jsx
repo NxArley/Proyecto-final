@@ -31,7 +31,7 @@ class Portfolio extends Component {
           <h1 className="offset-lg-2 mt-1 mb-3 text-primary">REALIZA TU PEDIDO</h1>
           <br></br><br></br>
           <div className="col-lg-8 offset-lg-2 border border-primary rounded bg-light mb-3">
-            {token && token !== '' && token != undefined ? ("you ar loged " + token) : (
+            {token && token !== '' && token !== undefined ? ("you ar loged " + token) : (
               <form onSubmit={this.handleSubmit}>
                 <div class="rrow mt-3 m-2 mr-2 mb-2 ">
                   <div class="col">

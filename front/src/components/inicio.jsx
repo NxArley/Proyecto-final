@@ -10,6 +10,11 @@ class Header extends Component {
          })
       }
 
+      const salir = () =>{
+         sessionStorage.clear()
+         window.location.href="/"
+      }
+
       return (
          <header id="home">
 
@@ -26,6 +31,7 @@ class Header extends Component {
                   {/* <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li> */}
                   <li><a className="smoothscroll" href="#contact">Login</a></li>
                   <li><a className="smoothscroll" href="#contact">Registro</a></li>
+                  <li><a className="smoothscroll" href="#home" onClick={()=>salir()}>Salir</a></li>
                   
                </ul>
 
