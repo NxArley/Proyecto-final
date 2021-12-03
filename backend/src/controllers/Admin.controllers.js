@@ -8,11 +8,14 @@ const jwt = require('jsonwebtoken');
 
 AdminCtrl.crearAdmin = async(req,res)=>{
 
-    const {nombre,correo,contrasena} = req.body;
+    const {nombre,apellido,telefono,direccion,correo,contrasena} = req.body;
 
     const NuevoAdmin = new Admin({
 
         nombre,
+        apellido,
+        telefono,
+        direccion,
         correo,
         contrasena
     })
@@ -29,9 +32,10 @@ AdminCtrl.crearAdmin = async(req,res)=>{
         const token = jwt.sign({_id:NuevoAdmin._id},'Secreta');
         await NuevoAdmin.save();
         res.json({
-            mensaje: 'Bienvenido',
+            mensaje: 'Registrado con exito',
             id: NuevoAdmin._id,
             nombre: NuevoAdmin.nombre,
+            apellido: NuevoAdmin.apellido,
             token
         })
     }
