@@ -61,7 +61,6 @@ export default function Login() {
                                     className="form-control"
                                     onChange={(e)=>setCorreo(e.target.value)}
                                     required
-                                    autoFocus
                                     />
                                 </div>
                                 <div className="form-group">
@@ -71,7 +70,6 @@ export default function Login() {
                                     className="form-control"
                                     onChange={(e)=>setContrasena(e.target.value)}
                                     required
-                                    autoFocus
                                     />
                                 </div>
                                 <button type="submit" className="btn btn-primary btn-block">Enviar</button>
