@@ -6,11 +6,9 @@ import Inicio from './components/inicio';
 import Footer from './components/Footer';
 import Nosotros from './components/Nosotros';
 import Productos from './components/Productos';
-// import Contactenos from './Components/Contactenos';
-// import Testimonials from './Components/Testimonials';
-import Login from './components/login';
-import Registro from './components/registro';
-import Pedido from './components/Pedido';
+import Login from './components/Login';
+import Registro from './components/Registro';
+import Pedidos from './components/Pedidos';
 
 class App extends Component {
 
@@ -51,14 +49,13 @@ class App extends Component {
         <Inicio data={this.state.resumeData.main}/>
         <Nosotros data={this.state.resumeData.main}/>
         <Productos data={this.state.resumeData.resume}/>
-        <Pedido data={this.state.resumeData.portfolio}/>
-        {/* <Testimonials data={this.state.resumeData.testimonials}/> */}
-        <Login data={this.state.resumeData.main}/>
-        <Registro data={this.state.resumeData.main}/>
-        {/* <Contactenos data={this.state.resumeData.main}/> */}
+        <Pedidos/>
+        <Login/>
+        <Registro/>
         <Footer data={this.state.resumeData.main}/>
         
       </div>
+
     );
   }
 }

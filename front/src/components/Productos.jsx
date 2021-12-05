@@ -25,7 +25,7 @@ class Resume extends Component {
           <h1>{skillmessage}</h1>
           <br></br>
           <div className="three columns">
-            <img className="profile-pic" src="../images/malteada.jpg" />
+            <img className="profile-pic" src="../images/malteada.jpg" alt="malteada"/>
           </div>
           <div className="nine columns main-col">
             <div className="row item">
@@ -40,7 +40,7 @@ class Resume extends Component {
         <div className="row work">
           <br></br>
           <div className="three columns">
-            <img className="profile-pic" src="../images/helados.jfif" />
+            <img className="profile-pic" src="../images/helados.jfif" alt="helados"/>
           </div>
           <div className="nine columns main-col">
             <div className="row item">
@@ -58,7 +58,7 @@ class Resume extends Component {
 
           <br></br>
           <div className="three columns">
-            <img className="profile-pic" src="../images/canasta.jpg" />
+            <img className="profile-pic" src="../images/canasta.jpg" alt="canasta"/>
           </div>
           <div className="nine columns main-col">
             <div className="row item">

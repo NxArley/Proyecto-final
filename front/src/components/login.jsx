@@ -1,90 +1,84 @@
-import React, { Fragment } from 'react';
+import React, {useState} from 'react'
+import Axios from 'axios'
+import swal from 'sweetalert2'
 
+export default function Login() {
 
-class Login extends React.Component{
-    
+    const [correo, setCorreo] = useState('')
+    const [contrasena, setContrasena] = useState('')
 
-    
+    const Login = async(e)=>{
 
-    constructor(props){
-        super(props);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleChange = this.handleChange.bind(this);        
+        e.preventDefault();
+        const usuario = {correo,contrasena}
+        const respuesta = await Axios.post('/admin/login',usuario);
+        const mensaje = respuesta.data.mensaje
+
+        if(mensaje!=='Bienvenido'){
+            swal.fire({
+                icon:'error',
+                title:mensaje,
+                showConfirmButton:false,
+                timer:1500
+            })
+        }
+        else{
+            const token = respuesta.data.token
+            const nombre = respuesta.data.nombre
+            const idusuario = respuesta.data.id
+
+            sessionStorage.setItem('token',token)
+            sessionStorage.setItem('nombre',nombre)
+            sessionStorage.setItem('idusuario',idusuario)
+
+            swal.fire({
+                icon:'success',
+                title:mensaje,
+                showConfirmButton:false,
+                timer:1500
+            })
+
+        }
     }
 
-    emptyItem = {
-        username: '',
-        password: ''
-    }
-
-    state = {
-        item:this.emptyItem
-    }
-
-    handleChange(event) {
-        const target = event.target;
-        const value = target.value;
-        const name = target.name;
-        let item = {...this.state.item};
-        item[name] = value;
-        this.setState({item});
-    }
-
-    async handleSubmit(event) {
-        event.preventDefault();
-        await fetch('https://riego-flask.herokuapp.com/login', {
-          method: 'POST',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(this.state.item),
-        }).then(resp => {
-            if (resp.status === 200) return resp.json();
-            else alert('error login ');
-        }).then(data => {
-            sessionStorage.setItem("token",data.access_token)
-            console.log(data.access_token)
-        }).catch(error => {
-            console.log(error)
-        });
-        this.props.history.push('/cultivos');
-    }
-
-    render(){
-        const token = sessionStorage.getItem("token");
-        return(
-            <section id="contact">
-                <div className="container">                    
-                    <div className="row mt-3 ">
-                        <h1 className="offset-sm-1 mt-5 text-primary">Login</h1>
-                        <br></br><br></br>
-                        <div className="col-lg-6 offset-lg-1 border border-primary rounded bg-light mb-3">
-                            {token && token !== '' && token!=undefined ? ("you ar loged "+token):(
-                                <form onSubmit={this.handleSubmit}>
-                                    <div className="form-group mt-3 m-2 mr-2 mb-2 ">
-                                        <label >Username</label>
-                                        <input type="text" className="form-control" onChange={this.handleChange} id="username" name="username" aria-describedby="emailHelp"/>
-                                        <small id="emailHelp" className="form-text text-muted">We'll never share your username with anyone else.</small>
-                                    </div>
-                                    <div className="form-group  mt-3 m-2 mr-2 mb-2">
-                                        <label>Password</label>
-                                        <input type="password" className="form-control" onChange={this.handleChange} id="password" name="password"/>
-                                    </div>
-                                    <button type="submit" className="btn btn-primary btn-block mt-3 m-2 mr-2 mb-2">Submit</button>
-                                    
-                                </form>
-                            )}
+    return (
+        <section id="contact">
+        <div className="container mt-4">
+            <div className="row">
+            <h1 className="offset-lg-2 mt-1 mb-3 text-primary">Inicio de Sesion</h1>
+            <br></br><br></br>
+            <div className="col-lg-8 offset-lg-2 border border-primary rounded bg-light mb-3"> </div>
+                <div className="col-md-6 mx-auto">
+                    <div className="card">
+                        <div className="card-header text-center">
                         </div>
-                        <div className="col-lg-5">
-
+                        <div className="card-body">
+                            <form onSubmit={Login}>
+                                <div className="form-group">
+                                    <label>Correo</label>
+                                    <input
+                                    type="email"
+                                    className="form-control"
+                                    onChange={(e)=>setCorreo(e.target.value)}
+                                    required
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label>Password</label>
+                                    <input
+                                    type="password"
+                                    className="form-control"
+                                    onChange={(e)=>setContrasena(e.target.value)}
+                                    required
+                                    />
+                                </div>
+                                <button type="submit" className="btn btn-primary btn-block">Enviar</button>
+                            </form>
                         </div>
                     </div>
-                    
                 </div>
-            </section>
-        );
-    }
+            </div>
+        </div>
+        </section>
+    )
 }
-
-export default Login;

@@ -7,7 +7,7 @@ const PedidoSchema = new Schema({
     size:Number,
     base:String,
     cobertura:String,
-    toppings:Array,
+    toppings:String,
     estado: {type:String, default:"Pendiente"}
 })
 
